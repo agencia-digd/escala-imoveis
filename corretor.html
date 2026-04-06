@@ -184,36 +184,50 @@
   }
   .dor-texto { font-size: 13px; color: var(--cinza); line-height: 1.7; }
 
-  /* ── ENTREGAS ── */
+  /* ── MÉTODO ── */
   .entregas { background: rgba(10,38,71,0.3); border-top: 1px solid var(--linha); border-bottom: 1px solid var(--linha); }
 
   .entregas-desc {
     font-size: 15px; color: var(--cinza);
-    max-width: 400px; margin-bottom: 48px; line-height: 1.7;
+    max-width: 460px; margin-bottom: 52px; line-height: 1.7;
   }
 
-  .entregas-list { display: flex; flex-direction: column; }
+  .pilares-list { display: flex; flex-direction: column; gap: 0; }
 
-  .entrega-item {
-    display: flex; align-items: flex-start; gap: 18px;
-    padding: 20px 0;
+  .pilar-item {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 24px;
+    padding: 28px 0;
     border-bottom: 1px solid var(--linha);
-    transition: background .2s;
+    align-items: start;
   }
-  .entrega-item:last-child { border-bottom: none; }
+  .pilar-item:last-child { border-bottom: none; }
 
-  .ei-marker {
-    flex-shrink: 0;
-    width: 8px; height: 8px;
-    border-radius: 50%; background: var(--ciano);
-    margin-top: 6px; opacity: .7;
+  .pilar-num {
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    color: var(--ciano); opacity: .5;
+    padding-top: 3px;
   }
-  .ei-body { flex: 1; }
-  .ei-nome {
-    font-size: 15px; font-weight: 700;
-    color: var(--branco); margin-bottom: 3px;
+  .pilar-body {}
+  .pilar-nome {
+    font-size: 16px; font-weight: 700;
+    color: var(--branco); margin-bottom: 6px;
+    letter-spacing: -.2px;
   }
-  .ei-desc { font-size: 13px; color: var(--cinza); line-height: 1.6; }
+  .pilar-desc { font-size: 13px; color: var(--cinza); line-height: 1.7; }
+  .pilar-tags {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: 12px;
+  }
+  .pilar-tag {
+    font-size: 10px; font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(0,180,216,0.7);
+    background: rgba(0,180,216,0.08);
+    border: 1px solid rgba(0,180,216,0.15);
+    padding: 3px 10px; border-radius: 40px;
+  }
 
   /* ── CTA ── */
   .cta-section {
@@ -375,77 +389,78 @@
   </div>
 </section>
 
-<!-- ENTREGAS -->
+<!-- MÉTODO -->
 <section class="entregas">
   <div class="section-inner">
-    <div class="section-label reveal">02 — O que entregamos</div>
-    <h2 class="section-title reveal">O que está<br><em>incluído.</em></h2>
-    <p class="entregas-desc reveal">Não é consultoria, não é curso. É implementação — montamos tudo junto com você durante 3 meses.</p>
+    <div class="section-label reveal">02 — O método</div>
+    <h2 class="section-title reveal">Como estruturamos<br><em>sua operação.</em></h2>
+    <p class="entregas-desc reveal">Não é uma lista de serviços. É um método com início, meio e fim — implementado junto com você em 3 meses para gerar previsibilidade real nas suas vendas.</p>
 
-    <div class="entregas-list">
-      <div class="entrega-item reveal">
-        <div class="ei-marker"></div>
-        <div class="ei-body">
-          <div class="ei-nome">Landing Page Profissional</div>
-          <div class="ei-desc">Página de captação criada para converter, não só para parecer bonita.</div>
+    <div class="pilares-list">
+
+      <div class="pilar-item reveal">
+        <div class="pilar-num">01</div>
+        <div class="pilar-body">
+          <div class="pilar-nome">Presença Digital</div>
+          <div class="pilar-desc">Montamos sua vitrine profissional do zero — para que quando um lead te encontre, ele já confie em você antes de falar contigo.</div>
+          <div class="pilar-tags">
+            <span class="pilar-tag">Landing Page</span>
+            <span class="pilar-tag">Google Meu Negócio</span>
+            <span class="pilar-tag">Instagram</span>
+          </div>
         </div>
       </div>
-      <div class="entrega-item reveal">
-        <div class="ei-marker"></div>
-        <div class="ei-body">
-          <div class="ei-nome">Google Meu Negócio</div>
-          <div class="ei-desc">Configuração e otimização para você aparecer nas buscas locais de quem procura imóveis na sua região.</div>
+
+      <div class="pilar-item reveal">
+        <div class="pilar-num">02</div>
+        <div class="pilar-body">
+          <div class="pilar-nome">Geração de Leads</div>
+          <div class="pilar-desc">Criamos e gerenciamos suas campanhas para que leads qualificados cheguem até você todo mês — sem depender de indicação.</div>
+          <div class="pilar-tags">
+            <span class="pilar-tag">Meta Ads</span>
+            <span class="pilar-tag">Tráfego Pago</span>
+            <span class="pilar-tag">Conteúdo em Vídeo</span>
+          </div>
         </div>
       </div>
-      <div class="entrega-item reveal">
-        <div class="ei-marker"></div>
-        <div class="ei-body">
-          <div class="ei-nome">Instagram — Posts Planejados</div>
-          <div class="ei-desc">Conteúdo estratégico para construir autoridade local e aquecer os leads que chegam pelos anúncios.</div>
+
+      <div class="pilar-item reveal">
+        <div class="pilar-num">03</div>
+        <div class="pilar-body">
+          <div class="pilar-nome">Gestão da Operação</div>
+          <div class="pilar-desc">Nenhum lead some, nenhum follow-up esquecido. Configuramos seu CRM com automações para que a operação funcione mesmo quando você está atendendo.</div>
+          <div class="pilar-tags">
+            <span class="pilar-tag">CRM</span>
+            <span class="pilar-tag">Automações</span>
+            <span class="pilar-tag">Dashboard</span>
+          </div>
         </div>
       </div>
-      <div class="entrega-item reveal">
-        <div class="ei-marker"></div>
-        <div class="ei-body">
-          <div class="ei-nome">Tráfego Pago Meta Ads</div>
-          <div class="ei-desc">Gestão completa das campanhas no Facebook e Instagram. A gente cria, sobe, ajusta e otimiza.</div>
+
+      <div class="pilar-item reveal">
+        <div class="pilar-num">04</div>
+        <div class="pilar-body">
+          <div class="pilar-nome">Capacitação</div>
+          <div class="pilar-desc">Estrutura sem preparo não sustenta resultado. Por isso o método inclui treinamento de vendas e de mentalidade — para você fechar mais e manter a consistência.</div>
+          <div class="pilar-tags">
+            <span class="pilar-tag">Treinamento de Vendas</span>
+            <span class="pilar-tag">Treinamento de Mentalidade</span>
+          </div>
         </div>
       </div>
-      <div class="entrega-item reveal">
-        <div class="ei-marker"></div>
-        <div class="ei-body">
-          <div class="ei-nome">CRM + Automações</div>
-          <div class="ei-desc">Sistema configurado para você acompanhar cada lead, sem deixar nenhum escapar. Com follow-up automatizado.</div>
+
+      <div class="pilar-item reveal">
+        <div class="pilar-num">05</div>
+        <div class="pilar-body">
+          <div class="pilar-nome">Visibilidade dos Resultados</div>
+          <div class="pilar-desc">Você acompanha tudo em tempo real — leads, conversões, custo por lead — e toma decisão com dados, não com achismo.</div>
+          <div class="pilar-tags">
+            <span class="pilar-tag">Dashboard</span>
+            <span class="pilar-tag">Métricas em Tempo Real</span>
+          </div>
         </div>
       </div>
-      <div class="entrega-item reveal">
-        <div class="ei-marker"></div>
-        <div class="ei-body">
-          <div class="ei-nome">Edição de Vídeo</div>
-          <div class="ei-desc">Seus vídeos editados durante a implementação, prontos para postar.</div>
-        </div>
-      </div>
-      <div class="entrega-item reveal">
-        <div class="ei-marker"></div>
-        <div class="ei-body">
-          <div class="ei-nome">Treinamento de Vendas</div>
-          <div class="ei-desc">Capacitação individual para você fechar mais com os leads que chegam, sem precisar dar desconto.</div>
-        </div>
-      </div>
-      <div class="entrega-item reveal">
-        <div class="ei-marker"></div>
-        <div class="ei-body">
-          <div class="ei-nome">Treinamento de Mentalidade</div>
-          <div class="ei-desc">Consistência e performance para sustentar os resultados no longo prazo.</div>
-        </div>
-      </div>
-      <div class="entrega-item reveal">
-        <div class="ei-marker"></div>
-        <div class="ei-body">
-          <div class="ei-nome">Dashboard de Acompanhamento</div>
-          <div class="ei-desc">Painel com suas métricas em tempo real: leads, conversões, custo por lead.</div>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
