@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap');</style>
+
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#0A2647" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#001833" stop-opacity="1"/>
+    </radialGradient>
+
+    <radialGradient id="iconGlow" cx="50%" cy="100%" r="80%">
+      <stop offset="0%" stop-color="#0052CC" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#001833" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="peakGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#48D8F0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Grid pattern sutil de fundo -->
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,180,216,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="500" height="500" fill="url(#bgGlow)"/>
+  <!-- Grid sutil -->
+  <rect width="500" height="500" fill="url(#grid)"/>
+
+  <!-- Halo atrás do ícone -->
+  <ellipse cx="250" cy="310" rx="160" ry="90" fill="url(#iconGlow)"/>
+
+  <!-- ===== ÍCONE CENTRALIZADO ===== -->
+  <!-- 3 barras em escada, centradas em x=250, base em y=310 -->
+  <!-- Largura total das 3 barras: 3×60 + 2×20 = 220px → começa em x=140 -->
+
+  <!-- Barra 1 — curta, azul escuro -->
+  <rect x="140" y="240" width="60" height="70" rx="10" fill="#003D99"/>
+
+  <!-- Barra 2 — média, azul médio -->
+  <rect x="220" y="190" width="60" height="120" rx="10" fill="#0066BB"/>
+
+  <!-- Barra 3 — alta, ciano -->
+  <rect x="300" y="130" width="60" height="180" rx="10" fill="#00B4D8"/>
+  <!-- Reflexo topo -->
+  <rect x="300" y="130" width="60" height="60" rx="10" fill="url(#peakGlow)" opacity="0.6"/>
+
+  <!-- Linha de tendência -->
+  <polyline
+    points="170,240 250,190 330,130"
+    stroke="rgba(255,255,255,0.22)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-dasharray="6,7"
+    fill="none"/>
+
+  <!-- Indicador de pico -->
+  <circle cx="330" cy="130" r="14" fill="#00B4D8" opacity="0.2"/>
+  <circle cx="330" cy="130" r="8" fill="#48D8F0"/>
+
+  <!-- ===== WORDMARK ABAIXO ===== -->
+
+  <!-- ESCALA -->
+  <text
+    x="250" y="390"
+    text-anchor="middle"
+    font-family="'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="800"
+    font-size="72"
+    letter-spacing="-2"
+    fill="#FFFFFF">ESCALA</text>
+
+  <!-- IMÓVEIS -->
+  <text
+    x="250" y="432"
+    text-anchor="middle"
+    font-family="'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="700"
+    font-size="22"
+    letter-spacing="12"
+    fill="#00B4D8">IMÓVEIS</text>
+
+</svg>
